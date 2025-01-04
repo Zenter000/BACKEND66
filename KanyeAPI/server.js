@@ -40,7 +40,7 @@ app.get('/items/:id', (req, res) => {
 app.put('/items/:id', (req, res) => {
   const { id } = req.params;
   const { name } = req.body;
-  const item = items.find(i => i.id === parseInt(id));
+  const item = items.find(i => i.id === parseInt(id));   
 
   if (!item) {
     return res.status(404).json({ error: 'Item not found' });
